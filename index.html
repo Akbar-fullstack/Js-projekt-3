@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul li a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+        }
+
+        ul li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0%;
+            height: 2px;
+            background-color: #F1CDB3;
+            transition: width 0.3s ease;
+        }
+
+        ul li a:hover::after {
+            width: 100%;
+        }
+    </style>
+
+    <header class="text-white h-190" style="background: linear-gradient(0deg, #2c231e, #35302d),
+radial-gradient(100% 215.42% at 0% 0%, #e5e3e1 0%, #474341 100%);
+">
+        <nav class="flex justify-between">
+            <div class="mx-10 my-5">
+                <h1 class="text-4xl text-[#F1CDB3] ">Cozy House</h1>
+                <p>Shelter for pets in Boston</p>
+            </div>
+            <div>
+                <ul class="flex gap-5 relative right-10 top-10">
+                    <li><a href="">About the shelter</a></li>
+                    <li><a href="">Our pets</a></li>
+                    <li><a href="">Help the shelter</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="flex justify-between">
+            <div class="flex flex-col gap-10 my-40 mx-10">
+                <h1 class="text-5xl">Not only people <br> need a house</h1>
+                <p>We offer to give a chance to a little and nice puppy with an extremely <br> wide and open heart. He
+                    or she will love you more than anybody else <br> in the world, you will see!</p>
+                <button class="bg-[#F1CDB3] text-black w-45 h-15 rounded-4xl cursor-pointer">Make a friend</button>
+            </div>
+            <img src="./start-screen-puppy.png" alt="" class="w-150 h-164 relative right-30">
+        </section>
+    </header>
+
+    <main>
+        <section class="flex justify-around my-20">
+            <img src="./368c0662de200ad351db707bd7878caaee2f7b79.png" alt="">
+            <div class="flex flex-col gap-7">
+                <h1 class="text-5xl">About the shelter <br> “Cozy House”</h1>
+                <p>Currently we have 121 dogs and 342 cats on our hands and <br> statistics show that only 20% of them
+                    will find a family. The <br> others will continue to live with us and will be waiting for a lucky
+                    <br> chance to become dearly loved.
+                </p>
+                <p>We feed our wards with the best food and make sure that they <br> do not get sick, feel comfortable
+                    (including psychologically) and <br> well. We are supported by 87 volunteers and 28 employees of
+                    <br> various skill levels. About 12% of the animals are taken by the <br> shelter staff. Taking care
+                    of the animals, they become attached <br> to the pets and would hardly ever leave them alone.
+                </p>
+            </div>
+        </section>
+        <section class="bg-[#F6F6F6] h-230">
+            <h1 class="text-5xl text-center relative top-27 text-gray-600">Our friends who <br>are looking for a house
+            </h1>
+            <div class="flex justify-center gap-20 mt-50">
+                <div class="bg-white p-7 w-80 text-center">
+                    <img src="./4f8406984cbff971ed3cff4fcdd44ba6ce66e1be.png" alt="">
+                    <h3 class="text-2xl">Katrine</h3>
+                    <button onclick="openModal('katrineModal')"
+                        class="border border-[#F1CDB3] w-45 h-15 mt-2 rounded-4xl cursor-pointer">
+                        Learn more
+                    </button>
+                </div>
+                <div class="bg-white p-7 w-80 text-center">
+                    <img src="./8e6d89eeb523e1700aa8817d3357edad5cf38558.png" alt="">
+                    <h3 class="text-2xl">Jennifer</h3>
+                    <button onclick="openModal('jenniferModal')"
+                        class="border border-[#F1CDB3] w-45 h-15 mt-2 rounded-4xl cursor-pointer">
+                        Learn more
+                    </button>
+                </div>
+                <div class="bg-white p-7 w-80 text-center">
+                    <img src="./beb6e4f3d18a0a8b1c7ed291ade3e2e10ff4ebfe.png" alt="">
+                    <h3 class="text-2xl">Woody</h3>
+                    <button onclick="openModal('woodyModal')"
+                        class="border border-[#F1CDB3] w-45 h-15 mt-2 rounded-4xl cursor-pointer">
+                        Learn more
+                    </button>
+                </div>
+            </div>
+
+            <button class="relative left-150 bg-orange-300 w-75 h-15 rounded-4xl cursor-pointer mt-20">Get to know the
+                rest</button>
+        </section>
+        <div id="katrineModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white p-8 rounded-lg w-[500px] relative">
+                <button onclick="closeModal('katrineModal')" class="absolute top-2 right-2 text-xl border border-yellow-600 rounded-full w-15 h-15">&times;</button>
+                <img src="./4f8406984cbff971ed3cff4fcdd44ba6ce66e1be.png" class="mx-auto mb-4 w-40">
+                <h3 class="text-2xl mb-2">Katrine</h3>
+                <p class="text-gray-600">Katrine is a playful 3 months old cat who loves cuddles and chasing toys around
+                    the house.</p>
+                <ul class="mt-4 text-left text-sm text-gray-700">
+                    <li><strong>Age:</strong> 3 months</li>
+                    <li><strong>Inoculations:</strong> none</li>
+                    <li><strong>Diseases:</strong> none</li>
+                    <li><strong>Parasites:</strong> none</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="jenniferModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white p-8 rounded-lg w-[500px] relative">
+                <button onclick="closeModal('jenniferModal')" class="absolute top-2 right-2 text-xl border border-yellow-600 rounded-full w-15 h-15">&times;</button>
+                <img src="./8e6d89eeb523e1700aa8817d3357edad5cf38558.png" class="mx-auto mb-4 w-40">
+                <h3 class="text-2xl mb-2">Jennifer</h3>
+                <p class="text-gray-600">Jennifer is a sweet 2 months old Labrador that loves running outside and
+                    playing with toys indoors.</p>
+                <ul class="mt-4 text-left text-sm text-gray-700">
+                    <li><strong>Age:</strong> 2 months</li>
+                    <li><strong>Inoculations:</strong> none</li>
+                    <li><strong>Diseases:</strong> none</li>
+                    <li><strong>Parasites:</strong> none</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="woodyModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white p-8 rounded-lg w-[500px] relative">
+                <button onclick="closeModal('woodyModal')" class="absolute top-2 right-2 text-xl border border-yellow-600 rounded-full w-15 h-15">&times;</button>
+                <img src="./beb6e4f3d18a0a8b1c7ed291ade3e2e10ff4ebfe.png" class="mx-auto mb-4 w-40">
+                <h3 class="text-2xl mb-2">Woody</h3>
+                <p class="text-gray-600">Woody is a cheerful 4 months old dog who enjoys long walks and friendly
+                    company.</p>
+                <ul class="mt-4 text-left text-sm text-gray-700">
+                    <li><strong>Age:</strong> 4 months</li>
+                    <li><strong>Inoculations:</strong> none</li>
+                    <li><strong>Diseases:</strong> none</li>
+                    <li><strong>Parasites:</strong> none</li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h1 class="text-5xl text-center relative top-27 text-gray-600">How you can help <br>our shelter</h1>
+            <div class="">
+                <img class="mt-60 ml-60 mb-30" src="./List.png" alt="">
+            </div>
+        </section>
+        <section class="bg-[#F6F6F6] p-25">
+            <div class="flex justify-around">
+                <img src="./1f3b57134de50a478798dee0c8a94d5e81e6aebc (1).png" class="h-100" alt="">
+                <div class="flex flex-col gap-5">
+                    <h1 class="text-5xl">You can also <br> make a donation</h1>
+                    <p>Name of the bank / Type of bank account</p>
+                    <img src="./Credit card.png" alt="">
+                    <p class="text-gray-300">Legal information and lorem ipsum dolor sit amet, consectetur <br>
+                        adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac <br> diam. Praesent
+                        ultrices maximus tortor et <br> vulputate. Interdum et malesuada fames ac ante ipsum primis in
+                        faucibus.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-15"
+        style="background: linear-gradient(0deg, #2c231e, #35302d),radial-gradient(100% 215.42% at 0% 0%, #e5e3e1 0%, #474341 100%);">
+        <div class="flex justify-between">
+            <img src="./Contacts.png" alt="">
+            <img src="./Locations.png" alt="">
+            <img class="" src="./d7fd4984accf7d9f1d6438ce69e7e4f62e842db7.png" alt="">
+        </div>
+    </footer>
+
+</body>
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+        document.getElementById(id).classList.add('hidden');
+    }
+
+</script>
+</html>
